@@ -1,0 +1,396 @@
+/* ===========================
+   WHOLE PAGE: PROJECT DATA + CHAT
+   =========================== */
+
+.project-data-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 4vw 3rem 4vw; /* keep space for navbar */
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  box-sizing: border-box;
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+  color: #e5e7eb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   LEFT SIDE: PROJECT INFO + SUBMISSION
+   =========================== */
+
+.project-data-container {
+  width: 60%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Project summary card */
+.project-data {
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: 1.1rem;
+  padding: 1.4rem 1.5rem 1.2rem 1.5rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.project-data h3 {
+  font-size: 1.45rem;
+  margin: 0 0 0.35rem 0;
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+.project-data > p {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Sections inside project-data (skills / budget / deadline) */
+.project-data span {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.project-data span h5 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.project-data span .required-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.project-data span .required-skills p {
+  margin: 0;
+  color: #a5f3fc;
+  border: 1px solid rgba(45, 212, 191, 0.7);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: rgba(15, 118, 110, 0.15);
+}
+
+.project-data span h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #f97316;
+}
+
+/* ===========================
+   SUBMISSION FORM CARD
+   =========================== */
+
+.project-form-body {
+  margin-top: 0.4rem;
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: 1.1rem;
+  padding: 1.4rem 1.5rem 1.4rem 1.5rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.project-form-body h4 {
+  margin: 0 0 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* Input grid row */
+.project-form-body span {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 49% 49%;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Inputs */
+.project-form-body span input,
+.project-form-body input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  outline: none;
+  background: rgba(15, 23, 42, 0.88);
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.project-form-body input::placeholder,
+.project-form-body textarea::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.project-form-body input:focus,
+.project-form-body textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.65);
+  background: rgba(15, 23, 42, 0.96);
+}
+
+/* Textarea */
+.project-form-body textarea {
+  width: 100%;
+  min-height: 20vh;
+  resize: vertical;
+  padding: 10px 11px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.88);
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Submit button */
+.project-form-body button {
+  margin-top: 0.6rem;
+  width: 100%;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #38bdf8, #f97316);
+  color: #020617;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.project-form-body button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 1);
+  opacity: 0.97;
+}
+
+/* ===========================
+   RIGHT SIDE: CHAT CONTAINER
+   =========================== */
+
+.project-chat-container {
+  width: 35%;
+  height: 85vh;
+  border-radius: 1.1rem;
+  padding: 1.1rem 1.1rem 1rem 1.1rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.98);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-chat-container h4 {
+  font-size: 1.1rem;
+  margin: 0 0 0.6rem 0;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.project-chat-container hr {
+  border: none;
+  border-top: 1px solid rgba(51, 65, 85, 0.9);
+  margin: 0 0 0.6rem 0;
+}
+
+/* ===========================
+   CHAT BODY & MESSAGES
+   =========================== */
+
+.chat-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages list */
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* My messages */
+.chat-messages .my-message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-messages .my-message div {
+  color: #f9fafb;
+  background-color: #e75221e0 !important;
+  width: fit-content;
+  max-width: 80%;
+  padding: 6px 16px;
+  border-radius: 1rem 1rem 0 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.chat-messages .my-message p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.chat-messages .my-message h6 {
+  margin: 3px 0 0 0;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-align: right;
+  opacity: 0.85;
+}
+
+/* Received messages */
+.chat-messages .received-message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chat-messages .received-message div {
+  color: #f9fafb;
+  background-color: #218ee7e0 !important;
+  width: fit-content;
+  max-width: 80%;
+  padding: 6px 16px;
+  border-radius: 1rem 1rem 1rem 0;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.chat-messages .received-message h5 {
+  margin: 0 0 2px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.chat-messages .received-message p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.chat-messages .received-message h6 {
+  margin: 3px 0 0 0;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.85;
+}
+
+/* ===========================
+   CHAT INPUT ROW
+   =========================== */
+
+.chat-input {
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.chat-input input {
+  width: 75%;
+  height: 7.2vh;
+  border-radius: 2rem 0 0 2rem;
+  padding: 0 10px;
+  border: 1.5px solid #d4d4d4;
+  outline: none;
+  font-size: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+.chat-input input::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.chat-input button {
+  width: 25%;
+  height: 7.2vh;
+  border-radius: 0 2rem 2rem 0;
+  border: 1.5px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    transform 0.12s ease;
+}
+
+.chat-input button:hover {
+  border-color: #f97316;
+  color: #020617;
+  background-color: #f97316;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE LAYOUT
+   =========================== */
+
+@media (max-width: 900px) {
+  .project-data-page {
+    flex-direction: column;
+    padding: 5.2rem 4vw 3rem 4vw;
+  }
+
+  .project-data-container,
+  .project-chat-container {
+    width: 100%;
+  }
+
+  .project-chat-container {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-data-page {
+    padding: 5rem 3vw 2.5rem 3vw;
+  }
+
+  .project-data {
+    padding: 1.1rem 1.1rem 1rem 1.1rem;
+  }
+
+  .project-form-body {
+    padding: 1.1rem 1.1rem 1rem 1.1rem;
+  }
+
+  .project-chat-container {
+    padding: 0.9rem 0.9rem 0.8rem 0.9rem;
+  }
+
+  .project-data h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-data > p {
+    font-size: 0.88rem;
+  }
+}

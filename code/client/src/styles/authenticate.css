@@ -1,0 +1,227 @@
+/* ===========================
+   AUTH PAGE WRAPPER
+   =========================== */
+
+.AuthenticatePage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #e5e7eb;
+}
+
+/* ===========================
+   AUTH TOP BAR (INSIDE PAGE)
+   =========================== */
+
+.auth-navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.9);
+}
+
+/* Brand text */
+.auth-navbar h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #38bdf8, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.auth-navbar h3:hover {
+  transform: translateY(-1px);
+}
+
+/* Right text (e.g., "Back to home" / "Sign in") */
+.auth-navbar p {
+  margin: 0;
+  margin-left: 2vw;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.86;
+  transition: opacity 0.18s ease, transform 0.16s ease;
+}
+
+.auth-navbar p:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   AUTH FORM CARD
+   =========================== */
+
+.authForm {
+  margin-top: 11vh;
+  width: 100%;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 28px 26px 30px 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+
+  font-family: 'Work Sans', sans-serif;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 1.1rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+/* Heading */
+.authForm h2 {
+  margin-bottom: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: #f9fafb;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+/* Each input group */
+.authFormInputs {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.authFormInputs label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* ===========================
+   INPUTS & SELECT
+   =========================== */
+
+.authFormInputs input,
+.authForm select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  outline: none;
+
+  background-color: #020617 !important;
+  color: #f9fafb !important;
+
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.authFormInputs input::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+/* Focus state */
+.authFormInputs input:focus,
+.authForm select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.65);
+  background-color: #020617 !important;
+  color: #ffffff !important;
+}
+
+.authForm select {
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+
+.authForm button {
+  margin-top: 8px;
+  width: 100%;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(90deg, #38bdf8, #f97316);
+  font-weight: 600;
+  color: #020617;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  box-shadow: 0 16px 46px rgba(15, 23, 42, 0.95);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+}
+
+.authForm button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 1);
+  opacity: 0.97;
+}
+
+/* ===========================
+   SWITCH TEXT (LOGIN <-> REGISTER)
+   =========================== */
+
+.authForm p {
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: #cbd5f5;
+  text-align: center;
+}
+
+.authForm p span {
+  color: #38bdf8;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.authForm p span:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 600px) {
+  .authForm {
+    margin-top: 12vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    padding: 22px 18px 24px 18px;
+  }
+
+  .authForm h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Safety net – any input/select under AuthenticatePage keeps bright text */
+.AuthenticatePage input,
+.AuthenticatePage select {
+  color: #ffffff !important;
+}

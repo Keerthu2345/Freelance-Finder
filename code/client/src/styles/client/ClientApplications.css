@@ -1,0 +1,264 @@
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+
+.client-applications-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 4vw 3rem 4vw;
+
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+  color: #e5e7eb;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   HEADER (TITLE + SELECT)
+   =========================== */
+
+.client-applications-page > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-applications-page span h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: 0.02em;
+}
+
+/* Filter dropdown */
+.client-applications-page span select {
+  width: 50%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(148, 163, 184, 0.65);
+  background-color: rgba(2, 6, 23, 0.9);
+  color: #e2e8f0;
+
+  font-size: 0.93rem;
+  outline: none;
+  cursor: pointer;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.client-applications-page span select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.55);
+}
+
+/* ===========================
+   MAIN SCROLL CONTAINER
+   =========================== */
+
+.client-applications-body {
+  margin-top: 1.5rem;
+  height: 72vh;
+
+  background: rgba(2, 6, 23, 0.95);
+  border-radius: 1.1rem;
+
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.95);
+  overflow-y: auto;
+}
+
+/* Scrollbar */
+.client-applications-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.client-applications-body::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.75);
+  border-radius: 999px;
+}
+
+/* ===========================
+   SINGLE APPLICATION CARD ROW
+   =========================== */
+
+.client-application {
+  padding: 1.2rem 1.4rem;
+  cursor: default;
+
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.client-application:hover {
+  transform: translateY(-2px);
+  background-color: rgba(56, 189, 248, 0.06);
+  box-shadow: 0 20px 55px rgba(2, 6, 23, 0.9);
+}
+
+/* ===========================
+   CONTENT LAYOUT: LEFT + RIGHT
+   =========================== */
+
+.client-application-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Divider line */
+.vertical-line {
+  width: 1px;
+  background: rgba(51, 65, 85, 0.8);
+}
+
+/* Half sections */
+.client-application-half {
+  width: 48%;
+}
+
+/* ===========================
+   TEXT & HEADING STYLES
+   =========================== */
+
+.client-application-half h4 {
+  font-size: 1.12rem;
+  margin: 0 0 0.35rem 0;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.client-application-half p {
+  font-size: 0.93rem;
+  margin: 0.18rem 0;
+  color: #d1d5db;
+  line-height: 1.45;
+}
+
+/* Info groups */
+.client-application-half span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  margin-top: 0.4rem;
+}
+
+/* Sub-headings */
+.client-application-half span h5 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* ===========================
+   SKILL TAGS
+   =========================== */
+
+.application-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.application-skills p {
+  margin: 0;
+  font-size: 0.76rem;
+
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  background: rgba(249, 115, 22, 0.08);
+  font-weight: 500;
+}
+
+/* Small label rows */
+.client-application-half h6 {
+  font-size: 0.88rem;
+  margin: 0.2rem 0;
+  color: #e2e8f0;
+}
+
+.client-application-half h6 b {
+  color: #94a3b8;
+}
+
+/* Divider under each application */
+.client-application hr {
+  height: 1px;
+  background-color: rgba(51, 65, 85, 0.7);
+  width: 100%;
+  margin-top: 0.95rem;
+  border: none;
+}
+
+/* ===========================
+   BUTTON ROW (APPROVE/REJECT)
+   =========================== */
+
+.approve-btns {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.approve-btns button {
+  min-width: 120px;
+  height: 38px;
+  font-size: 0.87rem;
+  border-radius: 999px;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+  .client-applications-page {
+    padding: 5.2rem 3vw 2.8rem 3vw;
+  }
+
+  .client-applications-page > span {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .client-applications-page span select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .client-application-body {
+    flex-direction: column;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .client-application-half {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .client-applications-body {
+    padding-top: 0.2rem;
+  }
+
+  .client-application {
+    padding: 1rem;
+  }
+
+  .client-application-half h4 {
+    font-size: 1rem;
+  }
+
+  .client-application-half p {
+    font-size: 0.86rem;
+  }
+}

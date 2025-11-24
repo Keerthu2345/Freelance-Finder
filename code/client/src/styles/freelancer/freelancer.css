@@ -1,0 +1,297 @@
+/* ===========================
+   FREELANCER DASHBOARD PAGE
+   =========================== */
+
+.freelancer-home {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 4vw 3rem 4vw;
+  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+
+  color: #e5e7eb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   TOP INFO STRIP (RIGHT SIDE)
+   =========================== */
+
+.freelancer-data-top {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
+.freelancer-data-top span {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+}
+
+.freelancer-data-top span b {
+  font-size: 0.82rem;
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+.freelancer-data-top span p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+/* ===========================
+   TOP STAT CARDS
+   =========================== */
+
+.home-cards {
+  width: 100%;
+  max-width: 960px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+/* Individual card */
+.home-card {
+  flex: 1 1 200px;
+  max-width: 230px;
+  min-height: 130px;
+
+  padding: 1.1rem 1.1rem 1rem 1.1rem;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 0.9rem;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), rgba(15, 23, 42, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease;
+  cursor: default;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 1);
+  border-color: rgba(56, 189, 248, 0.9);
+}
+
+/* Card title */
+.home-card h4 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  color: #e5e7eb;
+}
+
+/* Main number / value */
+.home-card p {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #f9fafb;
+}
+
+/* Card button (e.g., "View Projects") */
+.home-card button {
+  width: 100%;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(90deg, #38bdf8, #f97316);
+  color: #020617;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.home-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 1);
+  opacity: 0.96;
+}
+
+/* ===========================
+   FREELANCER DETAILS CARD
+   =========================== */
+
+.freelancer-details {
+  width: 100%;
+  max-width: 960px;
+
+  margin-top: 0.4rem;
+  padding: 1.6rem 1.7rem 1.5rem 1.7rem;
+
+  background: rgba(2, 6, 23, 0.96);
+  border-radius: 1.1rem;
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+/* VIEW MODE: profile info */
+.freelancer-details-data span {
+  display: block;
+  margin-bottom: 1.1rem;
+}
+
+.freelancer-details-data span h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.freelancer-details-data span p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Skills pill list */
+.freelancer-details-data .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.freelancer-details-data .skill {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.8rem;
+
+  border: 1px solid #f97316;
+  color: #fed7aa;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(248, 113, 113, 0.09);
+}
+
+/* Optional update button (Bootstrap outline-success) */
+.freelancer-details .btn-outline-success {
+  border-radius: 999px;
+  padding: 0.45rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-width: 1.5px;
+}
+
+/* ===========================
+   EDIT MODE – UPDATE DATA
+   =========================== */
+
+.freelancer-details-update {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.freelancer-details-update h4 {
+  margin: 0.4rem 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* Inputs & textarea */
+.freelancer-details-update input,
+.freelancer-details-update textarea {
+  background: #020617;
+  color: #e5e7eb;
+  border-radius: 0.7rem !important;
+  border: 1px solid rgba(148, 163, 184, 0.7) !important;
+  font-size: 0.9rem;
+}
+
+.freelancer-details-update textarea {
+  min-height: 18vh;
+  resize: vertical;
+}
+
+/* Focus state */
+.freelancer-details-update input:focus,
+.freelancer-details-update textarea:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.7);
+}
+
+/* Update button */
+.freelancer-details-update .btn-outline-success {
+  border-radius: 999px;
+  padding: 0.5rem 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+  .freelancer-home {
+    padding: 5.2rem 3vw 2.8rem 3vw;
+    gap: 1.4rem;
+  }
+
+  .home-cards {
+    justify-content: center;
+  }
+
+  .home-card {
+    max-width: none;
+  }
+
+  .freelancer-details {
+    padding: 1.4rem 1.3rem 1.3rem 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .freelancer-home {
+    padding: 5rem 3vw 2.5rem 3vw;
+  }
+
+  .home-cards {
+    flex-direction: column;
+  }
+
+  .home-card {
+    width: 100%;
+  }
+
+  .freelancer-data-top {
+    justify-content: center;
+  }
+}

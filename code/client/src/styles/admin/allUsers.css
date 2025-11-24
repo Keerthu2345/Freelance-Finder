@@ -1,0 +1,134 @@
+/* ==========================
+   ADMIN - ALL USERS PAGE
+=========================== */
+
+/* Page wrapper */
+.all-users-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 4vw 3rem 4vw; /* navbar space */
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+  box-sizing: border-box;
+  color: #e5e7eb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header title */
+.all-users-page h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+/* Main table container */
+.all-users-body {
+  margin-top: 1.4rem;
+  padding: 1.5rem;
+  background: rgba(2, 6, 23, 0.96);
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 24px 70px rgba(2, 6, 23, 0.98);
+  overflow: auto;
+}
+
+/* Table */
+.all-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+/* Table header */
+.all-users-table thead tr {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.all-users-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+  white-space: nowrap;
+}
+
+/* Table rows */
+.all-users-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Zebra striping for rows */
+.all-users-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Row hover effect */
+.all-users-table tbody tr:hover {
+  background: rgba(37, 99, 235, 0.16);
+  transition: background 0.2s ease;
+}
+
+/* Email / text wrapping nicely */
+.all-users-table td {
+  word-break: break-word;
+}
+
+/* Role highlight pill */
+.user-role {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* Different colors for roles */
+.user-role.client {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}
+
+.user-role.freelancer {
+  background: rgba(248, 113, 113, 0.1);
+  color: #f97316;
+  border: 1px solid #f97316;
+}
+
+.user-role.admin {
+  background: rgba(234, 179, 8, 0.1);
+  color: #eab308;
+  border: 1px solid #eab308;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .all-users-body {
+    padding: 1rem;
+  }
+
+  .all-users-table th,
+  .all-users-table td {
+    font-size: 0.86rem;
+    padding: 9px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .all-users-body {
+    padding: 0.8rem;
+  }
+
+  .all-users-table {
+    font-size: 0.82rem;
+  }
+
+  .all-users-table th,
+  .all-users-table td {
+    padding: 8px 6px;
+  }
+}

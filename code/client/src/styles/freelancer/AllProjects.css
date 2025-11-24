@@ -1,0 +1,266 @@
+/* ===========================
+   FREELANCER – ALL PROJECTS PAGE
+   =========================== */
+
+.all-projects-page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 2rem;
+  padding: 5.5rem 4vw 3rem 4vw; /* leaves space for navbar */
+  background: radial-gradient(circle at top, #020617 0, #020617 35%, #020617 100%);
+  color: #e5e7eb;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   LEFT – FILTERS PANEL
+   =========================== */
+
+.project-filters {
+  background: rgba(2, 6, 23, 0.96);
+  border-radius: 1rem;
+  padding: 1.5rem 1.3rem;
+  box-shadow: 0 24px 70px rgba(2, 6, 23, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  height: fit-content;
+  position: sticky;
+  top: 88px;
+}
+
+.project-filters h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5f5;
+}
+
+.project-filters hr {
+  border: none;
+  border-top: 1px solid rgba(51, 65, 85, 0.8);
+  margin-bottom: 1.1rem;
+}
+
+/* Filter blocks */
+.filters h5 {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.filter-options {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+
+/* Scrollbar styling */
+.filter-options::-webkit-scrollbar {
+  width: 5px;
+}
+.filter-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filter-options::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.7);
+  border-radius: 999px;
+}
+
+/* Bootstrap overrides for checkbox area */
+.form-check {
+  margin-bottom: 0.35rem;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #cbd5f5;
+}
+
+/* ===========================
+   RIGHT – PROJECTS LIST
+   =========================== */
+
+.projects-list {
+  background: transparent;
+}
+
+.projects-list h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.projects-list hr {
+  border: none;
+  border-top: 1px solid rgba(51, 65, 85, 0.8);
+  margin-bottom: 1.2rem;
+}
+
+/* Project card */
+.listed-project {
+  background: rgba(2, 6, 23, 0.96);
+  border-radius: 1rem;
+  padding: 1.25rem 1.3rem 1.1rem 1.3rem;
+  margin-bottom: 1.25rem;
+
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 24px 70px rgba(2, 6, 23, 0.98);
+
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.listed-project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 80px rgba(2, 6, 23, 1);
+  border-color: #38bdf8;
+  background: rgba(2, 6, 23, 0.98);
+}
+
+/* Header (title + date) */
+.listed-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listed-project-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.listed-project-head p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Budget + deadline */
+.listed-project h5 {
+  margin: 0.75rem 0 0.2rem 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #f97316;
+}
+
+.project-deadline {
+  font-size: 0.86rem;
+  color: #facc15;
+  margin: 0 0 0.35rem 0;
+  font-weight: 500;
+}
+
+/* Description */
+.listed-project > p {
+  margin: 0.25rem 0 0.7rem 0;
+  font-size: 0.9rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Skill tags */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.skills h6 {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.18);
+  color: #a5f3fc;
+  border: 1px solid rgba(45, 212, 191, 0.6);
+}
+
+/* Bottom row: bids info */
+.bids-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.15rem;
+}
+
+.bids-data p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #9ca3af;
+}
+
+.bids-data h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+/* Optional dashed divider */
+.listed-project hr {
+  border: none;
+  border-top: 1px dashed rgba(51, 65, 85, 0.9);
+  margin-top: 0.7rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+  .all-projects-page {
+    grid-template-columns: 1fr;
+    padding: 5.2rem 4vw 3rem 4vw;
+  }
+
+  .project-filters {
+    position: static;
+    order: 2;
+  }
+
+  .projects-list {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .all-projects-page {
+    padding: 5rem 3vw 2.5rem 3vw;
+  }
+
+  .listed-project {
+    padding: 1rem 1rem 0.9rem 1rem;
+  }
+
+  .listed-project-head h3 {
+    font-size: 1rem;
+  }
+
+  .listed-project > p {
+    font-size: 0.86rem;
+  }
+
+  .skills h6 {
+    font-size: 0.75rem;
+  }
+}

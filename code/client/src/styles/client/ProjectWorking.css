@@ -1,0 +1,400 @@
+/* ===========================
+   PAGE LAYOUT
+   =========================== */
+
+.project-data-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 4vw 3rem 4vw;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617 100%);
+  color: #e5e7eb;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===========================
+   LEFT SIDE: PROJECT DATA
+   =========================== */
+
+.project-data-container {
+  width: 60%;
+  text-align: left;
+
+  background: rgba(2, 6, 23, 0.95);
+  border-radius: 1.1rem;
+  padding: 1.6rem 1.7rem;
+
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.95);
+}
+
+.project-data h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  color: #f9fafb;
+}
+
+.project-data p {
+  font-size: 0.9rem;
+  margin: 0.12rem 0;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.project-data span {
+  display: block;
+  margin-top: 0.7rem;
+}
+
+.project-data span h5 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Required skills pills */
+.project-data span .required-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.project-data span .required-skills p {
+  margin: 0;
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  background: rgba(249, 115, 22, 0.08);
+  font-weight: 500;
+}
+
+.project-data span h6 {
+  margin: 0.4rem 0 0 0;
+  font-size: 0.86rem;
+  color: #e2e8f0;
+}
+
+/* ===========================
+   SUBMISSIONS SECTION
+   =========================== */
+
+.project-submissions-container {
+  margin-top: 1.8rem;
+  padding: 1.6rem 1.7rem;
+
+  border-radius: 1rem;
+  background: rgba(2, 6, 23, 0.96);
+
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 20px 55px rgba(2, 6, 23, 0.95);
+}
+
+.project-submissions-container h4 {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.project-submission {
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed rgba(51, 65, 85, 0.85);
+}
+
+.project-submission:last-child {
+  border-bottom: none;
+}
+
+.project-submission h5 {
+  margin: 0 0 0.18rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.project-submission h6 {
+  margin: 0.12rem 0;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.project-submission span {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  align-items: center;
+}
+
+.project-submission span h5 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.project-submission span a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #38bdf8;
+}
+
+.project-submission span a:hover {
+  text-decoration: underline;
+}
+
+.project-submission p {
+  margin: 0.2rem 0 0.5rem 0;
+  font-size: 0.86rem;
+  color: #cbd5e1;
+}
+
+/* Buttons row */
+.project-submission .submission-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.project-submission .submission-btns button {
+  min-width: 140px;
+  max-width: 200px;
+  height: 38px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ===========================
+   RIGHT SIDE: CHAT CONTAINER
+   =========================== */
+
+.project-chat-container {
+  width: 35%;
+  height: 85vh;
+
+  border-radius: 1.1rem;
+  padding: 1.6rem 1.5rem;
+
+  background: rgba(2, 6, 23, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.98);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-chat-container h4 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem 0;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.project-chat-container hr {
+  border: none;
+  border-top: 1px solid rgba(51, 65, 85, 0.9);
+  margin: 0.6rem 0 0.9rem 0;
+}
+
+/* ===========================
+   CHAT BODY
+   =========================== */
+
+.chat-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages list */
+.chat-messages {
+  height: 100%;
+  max-height: 55vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  overflow-y: auto;
+  padding-bottom: 1.2rem;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* My messages */
+.chat-messages .my-message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-messages .my-message div {
+  color: #fefce8;
+  background-color: #f97316e6 !important;
+  width: fit-content;
+  max-width: 80%;
+  padding: 6px 16px;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.chat-messages .my-message p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.chat-messages .my-message h6 {
+  margin: 2px 0 0 0;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+/* Received messages */
+.chat-messages .received-message {
+  width: 100%;
+  text-align: left;
+}
+
+.chat-messages .received-message div {
+  color: #f9fafb;
+  background-color: #38bdf8e6 !important;
+  width: fit-content;
+  max-width: 80%;
+  padding: 6px 16px;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.chat-messages .received-message h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.chat-messages .received-message p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.chat-messages .received-message h6 {
+  margin: 2px 0 0 0;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* ===========================
+   CHAT INPUT
+   =========================== */
+
+.chat-input {
+  margin-top: 0.9rem;
+  height: 9vh;
+
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.chat-input input {
+  width: 75%;
+  height: 8vh;
+  border-radius: 2rem 0 0 2rem;
+  padding: 0 12px;
+
+  border: 1.5px solid rgba(148, 163, 184, 0.8);
+  background: #020617;
+  color: #f9fafb;
+
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chat-input input::placeholder {
+  color: rgba(148, 163, 184, 0.75);
+}
+
+.chat-input input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.6);
+}
+
+/* Send button */
+.chat-input button {
+  width: 25%;
+  height: 8vh;
+  border-radius: 0 2rem 2rem 0;
+
+  border: 1.5px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.chat-input button:hover {
+  border-color: #f97316;
+  color: #020617;
+  background-color: #f97316;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+  .project-data-page {
+    flex-direction: column;
+    padding: 5.2rem 4vw 2.8rem 4vw;
+  }
+
+  .project-data-container {
+    width: 100%;
+  }
+
+  .project-chat-container {
+    width: 100%;
+    height: auto;
+    margin-top: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-data-page {
+    padding: 5rem 4vw 2.4rem 4vw;
+  }
+
+  .project-data-container,
+  .project-submissions-container {
+    padding: 1.3rem 1.2rem;
+  }
+
+  .project-chat-container {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .chat-input input {
+    height: 7.2vh;
+  }
+
+  .chat-input button {
+    height: 7.2vh;
+    font-size: 0.82rem;
+  }
+}
